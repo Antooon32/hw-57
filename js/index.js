@@ -16,14 +16,14 @@ function findLongestWord(string) {
     let wordArr = string.split(" ");
     let LongestWordIndex = 0;
     for (let i = 0; i < wordArr.length; i++) {
-        if (wordArr[LongestWordIndex] < wordArr[i]) {
+        if (wordArr[LongestWordIndex].length < wordArr[i].length) {
             LongestWordIndex = i;
         }
     }
 
     return wordArr[LongestWordIndex];
 }
-console.log(findLongestWord("abc abcde abcdef ab"));
+console.log(findLongestWord("aaabc abcde abcdef ab"));
 
 function formatString(string) {
     if (string.length <= 40) {
